@@ -3,8 +3,8 @@ import * as React from 'react'
 import Layout from '../components/layout'
 const SobreMi = () => {
  return (
-  <Layout pageTitle='sobre mi'>
-  <p>Soy un tipo aburrido y me voy a casar</p>
+  <Layout pageTitle='Sobre mí'>
+  <p>Soy un taekwondista. Pero hago la paz y no la guerra.</p>
 
  </Layout>
  )
