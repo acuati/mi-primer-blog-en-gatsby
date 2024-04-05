@@ -3,10 +3,14 @@ import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import Seo from '../components/seo'
 export const query = graphql`
-query {
-  allFile {
+query  {
+  allMdx {
     nodes {
-      name
+      frontmatter {
+        title
+        date
+      }
+      excerpt
     }
   }
 }
@@ -15,12 +19,17 @@ query {
 const Blog =  ({data})=>{
     return (
       <Layout pageTitle='Blog'>
-      <ul>
-      {data.allFile.nodes.map(node => (
-        <li key={node.id}>{node.name}</li>
+     
+      {data.allMdx.nodes.map(node => (
+        <div>
+        <p>{node.frontmatter.date}</p>
+        <h2>{node.frontmatter.title}</h2>
+        <p>{node.excerpt}</p>
+        <hr/>
+        </div>
       ) )}
       
-      </ul>
+      
       </Layout>
         )
         
