@@ -35,15 +35,17 @@ const Layout = ({ pageTitle, children }) => {
      <nav>
        <ul className={navLinks}>
          <li className={navLinkItem}><Link className={navLinkText} to="/">Inicio</Link></li>
-         <li className={navLinkItem}><Link className={navLinkText}to="/sobremi">Sobre Mí</Link></li>
+         <li className={navLinkItem}><Link className={navLinkText}to="/sobremi">Sobre mí</Link></li>
          <li className={navLinkItem}><Link className={navLinkText} to="/blog">Blog</Link></li>
-         <li className={navLinkItem}><a className={navLinkText} href="https://github.com/acuati">Github</a></li>
+        
+         <li className={navLinkItem}><Link className={navLinkText} to="/dondeestamos">¿Dónde estamos?</Link></li>       
        </ul>
      </nav>
      <main>
        <h1 className={heading}>{pageTitle}</h1>
        {children}
        <footer>
+         <p>Y mi <a className={navLinkText} href="https://github.com/acuati">Github</a></p>
         <p className="footer"> &copy; benalibenali {new Date().getFullYear()}</p>
        
         </footer>
