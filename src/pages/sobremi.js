@@ -11,7 +11,7 @@ const SobreMi = () => {
  )
 }
 // You'll learn about this in the next task, just copy it for now
-export const Head = () => <Seo title="Sobre Mí" />
+export const Head = () => <Seo title="Sobre mí" />
 // Step 3: Export your component
 export default SobreMi
 
