@@ -25,7 +25,7 @@ const Blog =  ({data})=>{
         <div>
         <p>{node.frontmatter.date}</p>
         <h2>{node.frontmatter.title}</h2>
-        <button>
+        <button className="btn btn-warning">
            <Link to={`/blog/${node.frontmatter.slug}`}>Leer más</Link>
         </button>
         <hr/>
